@@ -1,0 +1,76 @@
+.personal-information {
+  background: $color-primary;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+  background-image: url("../assets/img_bg_header.jpg");
+  display: flex;
+  color: $color-light;
+  margin-bottom: 50px;
+
+  margin: 0;
+
+  &__avatar {
+    display: none;
+  }
+  &__description {
+    width: 100%;
+    font-family: $font2;
+    padding: 0 15px;
+  }
+  &__name {
+    text-transform: capitalize;
+    @include font(44px);
+    font-weight: bold;
+    margin: 60px 0 10px;
+    padding-top: 20px;
+  }
+  &__work {
+    @include font(16px);
+    margin: 0px 0px 40px;
+  }
+  &__contact {
+    margin-bottom: 35px;
+    dl {
+      font-size: 16px;
+      line-height: 24px;
+      // @include font(16px);
+      font-family: "Roboto Mono", monospace;
+    }
+
+    dt {
+      float: left;
+      font-weight: 700;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+
+    dd {
+      padding: 0 0 0 100px;
+      margin: 0 0 20px;
+    }
+  }
+  &__social {
+    margin: 15px 0;
+    font-size: 24px;
+    a {
+      margin-left: 20px;
+    }
+    li {
+    }
+    i {
+      color: white;
+    }
+  }
+}
+.personal-information::before {
+  @include bg-gradient();
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+  z-index: 0;
+}
