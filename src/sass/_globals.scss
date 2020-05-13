@@ -1,6 +1,6 @@
 $color-primary: #0575e6;
 $color-secondary: #021b79;
-$color-extra: #949494e5;
+$color-extra: #555555;
 $color-dark: #000000;
 $color-light: #ffffff;
 $font1: "Roboto", sans-serif;
@@ -16,13 +16,13 @@ $font2: "Roboto Mono", monospace;
   background: $color-primary; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
-    rgba($color-secondary, 0.85),
-    rgba($color-primary, 0.85)
+    rgba($color-primary, 0.8),
+    rgba($color-secondary, 0.7)
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
-    rgba($color-secondary, 0.85),
-    rgba($color-primary, 0.85)
+    rgba($color-primary, 0.8),
+    rgba($color-secondary, 0.7)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
 }
@@ -35,8 +35,11 @@ $font2: "Roboto Mono", monospace;
 body {
   font-family: $font1;
   @include font(18px);
+  color: $color-extra;
+  width: 100%;
   font-weight: 400;
-  color: $color-dark;
+  
+  color: #555;
 }
 
 ul {
@@ -45,4 +48,17 @@ ul {
 
 .container {
   z-index: 1;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+html {
+  scroll-padding-top: 50px; /* height of sticky header */
 }

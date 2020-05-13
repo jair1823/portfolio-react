@@ -1,0 +1,35 @@
+/* Hello section */
+
+.hello {
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: $font2;
+    @include font(36px);
+    font-weight: 400;
+    color: $color-extra;
+  }
+  .about-me {
+    margin-bottom: 30px;
+    @include font(20px);
+    color: $color-extra;
+  }
+  .cv-download {
+    background-color: $color-primary;
+    text-decoration: none;
+    height: 25px;
+    border-radius: 25px;
+    @include font(16px);
+    text-transform: uppercase;
+    padding: 15px;
+    padding-top: 22px;
+    min-width: 170px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: content-box;
+    color: $color-light;
+    font-weight: 600;
+    overflow: hidden;
+  }
+}
+

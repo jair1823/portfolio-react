@@ -13,15 +13,15 @@ export default class PersonalInfo extends Component {
               Luis Jair Cordero Barona
             </p>
             <p className="personal-information__work">
-              Desarrollador de Software, Futuro Ingeniero en Computación
+              Software Developer
             </p>
             <div className="personal-information__contact">
               <dl>
-                <dt>Edad:</dt>
+                <dt>Age:</dt>
                 <dd>21</dd>
-                <dt>Teléfono:</dt>
+                <dt>Phone:</dt>
                 <dd>(+506) 7161-2841</dd>
-                <dt>Correo:</dt>
+                <dt>Email:</dt>
                 <dd>cordero1823.cr@gmail.com</dd>
               </dl>
             </div>

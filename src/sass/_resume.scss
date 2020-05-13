@@ -1,0 +1,58 @@
+.resume-title {
+  margin-bottom: 40px;
+  font-family: $font2;
+  @include font(36px);
+  font-weight: 400;
+  color: $color-extra;
+}
+
+.resume-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  &__title {
+    font-family: $font2;
+    @include font(14px);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-extra;
+    margin-bottom: 40px;
+  }
+  .resume-list__item {
+    border-left: 2px solid $color-primary;
+    padding-left: 25px;
+    padding-bottom: 50px;
+    .resume-list__item-title {
+      text-transform: uppercase;
+      color: $color-primary;
+      @include font(14px);
+      font-family: $font2;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+    .resume-list__item-place {
+      font-family: Inconsolata, monospace;
+      font-size: 14px;
+      line-height: 20px;
+      color: #999;
+    }
+    .resume-list__item-date {
+      font-family: Inconsolata, monospace;
+      font-size: 14px;
+      line-height: 20px;
+      color: #999;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.resume-list__item::before {
+  width: 12px;
+  height: 12px;
+  border: 2px solid $color-primary;
+  position: absolute;
+  content: "";
+  // border-radius: 50%;
+  background-color: $color-light;
+  left: 8px;
+}

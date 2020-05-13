@@ -3,16 +3,33 @@ import React, { Component } from "react";
 export default class Header extends Component {
   constructor() {
     super();
+
+    this.state = {
+      ipad: false,
+    };
+
     //ref for css
     this.menu = React.createRef();
     this.burger = React.createRef();
 
     //bind
     this.handleBurgerMenu = this.handleBurgerMenu.bind(this);
+    this.validation = this.validation.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    const ipad = window.matchMedia("screen and (max-width:991px)");
+    this.setState({
+      ipad: ipad.matches,
+    });
+    ipad.addListener(this.validation);
+  }
+
+  validation(event) {
+    this.setState({
+      ipad: event.matches,
+    });
   }
 
   componentWillUnmount() {
@@ -51,16 +68,40 @@ export default class Header extends Component {
             <nav className="header__menu" ref={this.menu}>
               <ul>
                 <li>
-                  <a href="#hello">Hola</a>
+                  <a
+                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                    className="menu-link"
+                    href="#hello"
+                  >
+                    Hola
+                  </a>
                 </li>
                 <li>
-                  <a href="#resume">Resume</a>
+                  <a
+                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                    className="menu-link"
+                    href="#resume"
+                  >
+                    Resume
+                  </a>
                 </li>
                 <li>
-                  <a href="#portfolio">Portafolio</a>
+                  <a
+                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                    className="menu-link"
+                    href="#portfolio"
+                  >
+                    Portafolio
+                  </a>
                 </li>
                 <li>
-                  <a href="#contact">Contacto</a>
+                  <a
+                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                    className="menu-link"
+                    href="#contact"
+                  >
+                    Contacto
+                  </a>
                 </li>
               </ul>
             </nav>

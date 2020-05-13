@@ -5,20 +5,19 @@
   background-position: 50%;
   background-size: cover;
   position: relative;
-  background-image: url("../assets/img_bg_header.jpg");
+  background-image: url("http://jaircordero.com/assets/img_bg_header.jpg");
   display: flex;
   color: $color-light;
   margin-bottom: 50px;
-
+  width: 100%;
   margin: 0;
-
   &__avatar {
     display: none;
   }
   &__description {
     width: 100%;
     font-family: $font2;
-    padding: 0 15px;
+    padding: 0;
   }
   &__name {
     text-transform: capitalize;
@@ -48,7 +47,7 @@
     }
 
     dd {
-      padding: 0 0 0 100px;
+      padding: 0 0 0 65px;
       margin: 0 0 20px;
     }
   }
@@ -57,8 +56,6 @@
     font-size: 24px;
     a {
       margin-left: 20px;
-    }
-    li {
     }
     i {
       color: white;
@@ -73,4 +70,5 @@
   right: 0;
   content: "";
   z-index: 0;
+  width: 100%;
 }
