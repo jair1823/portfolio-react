@@ -63,49 +63,48 @@ export default class Header extends Component {
           onClick={this.handleBurgerMenu}
           ref={this.burger}
         ></i>
-        <div className="">
-          <div className="container">
-            <nav className="header__menu" ref={this.menu}>
-              <ul>
-                <li>
-                  <a
-                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
-                    className="menu-link"
-                    href="#hello"
-                  >
-                    Hola
-                  </a>
-                </li>
-                <li>
-                  <a
-                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
-                    className="menu-link"
-                    href="#resume"
-                  >
-                    Resume
-                  </a>
-                </li>
-                <li>
-                  <a
-                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
-                    className="menu-link"
-                    href="#portfolio"
-                  >
-                    Portafolio
-                  </a>
-                </li>
-                <li>
-                  <a
-                    onClick={this.state.ipad ? this.handleBurgerMenu : null}
-                    className="menu-link"
-                    href="#contact"
-                  >
-                    Contacto
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+
+        <div className="container">
+          <nav className="header__menu" ref={this.menu}>
+            <ul>
+              <li>
+                <a
+                  onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                  className="menu-link"
+                  href="#hello"
+                >
+                  Hola
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                  className="menu-link"
+                  href="#resume"
+                >
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                  className="menu-link"
+                  href="#portfolio"
+                >
+                  Portafolio
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={this.state.ipad ? this.handleBurgerMenu : null}
+                  className="menu-link"
+                  href="#contact"
+                >
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     );

@@ -16,7 +16,7 @@ export default class Hello extends Component {
           rel="noopener noreferrer"
           className="cv-download"
         >
-          Download CV.
+          Download CV
         </a>
       </section>
     );

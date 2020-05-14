@@ -9,6 +9,11 @@
 .resume-list {
   margin-top: 30px;
   margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
   &__title {
     font-family: $font2;
     @include font(14px);
@@ -22,6 +27,7 @@
     border-left: 2px solid $color-primary;
     padding-left: 25px;
     padding-bottom: 50px;
+
     .resume-list__item-title {
       text-transform: uppercase;
       color: $color-primary;

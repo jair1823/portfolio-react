@@ -6,7 +6,7 @@ export default class PersonalInfo extends Component {
       <div className="personal-information">
         <div className="container">
           <div className="personal-information__avatar">
-            <img src="./images/me.jpg" alt="personal avatar" />
+            <img src="http://jaircordero.com/assets/img_avatar.jpg" alt="personal avatar" />
           </div>
           <div className="personal-information__description">
             <p className="personal-information__name">

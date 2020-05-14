@@ -1,30 +1,46 @@
 import React, { Component } from "react";
+import { education, experience } from "../data/data";
 
 export default class Resume extends Component {
+  showEducation() {
+    const educationList = education.map((e, i) => {
+      return (
+        <div className="resume-list__item" key={i}>
+          <p className="resume-list__item-title">{e.institution}</p>
+          <p className="resume-list__item-place">{e.place}</p>
+          <p className="resume-list__item-date">{`${e.start_date} - ${e.end_date}`}</p>
+          <p>{e.title}</p>
+        </div>
+      );
+    });
+    return educationList;
+  }
+  
+  showExperiece() {
+    const list = experience.map((e, i) => {
+      return (
+        <div className="resume-list__item" key={i}>
+          <p className="resume-list__item-title">{e.position}</p>
+          <p className="resume-list__item-place">{e.place}</p>
+          <p className="resume-list__item-date">{`${e.start_date} - ${e.end_date}`}</p>
+          <p>{e.responsability}</p>
+        </div>
+      );
+    });
+    return list;
+  }
+
   render() {
     return (
       <section className="section container" id="resume">
         <h1 className="resume-title">Resume_</h1>
         <div className="resume-list">
           <h3 className="resume-list__title">Education</h3>
-          <div className="resume-list__item">
-            <p className="resume-list__item-title">Colegio de Santa Ana</p>
-            <p className="resume-list__item-place">Santa Ana</p>
-            <p className="resume-list__item-date">02/2012 - 12/2016</p>
-            <p>High School Diploma</p>
-          </div>
-          <div className="resume-list__item">
-            <p className="resume-list__item-title">English Education CONARE</p>
-            <p className="resume-list__item-place">Cartago</p>
-            <p className="resume-list__item-date">03/2019 - Current</p>
-            <p>English C1 - Cambridge</p>
-          </div>
-          <div className="resume-list__item">
-            <p className="resume-list__item-title">Tecnológico De Costa Rica</p>
-            <p className="resume-list__item-place">San José</p>
-            <p className="resume-list__item-date">02/2017 - Current</p>
-            <p>Bachelor of Computer Science Engineering</p>
-          </div>
+          {this.showEducation()}
+        </div>
+        <div className="resume-list">
+          <h3 className="resume-list__title">Experience</h3>
+          {this.showExperiece()}
         </div>
       </section>
     );

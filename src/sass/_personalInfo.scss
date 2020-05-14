@@ -72,3 +72,45 @@
   z-index: 0;
   width: 100%;
 }
+
+@media screen and (min-width: 992px) {
+  .personal-information {
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 60px;
+    }
+    &__avatar {
+      display: block;
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+      img {
+        width: 94%;
+        border-radius: 5px;
+        -webkit-box-shadow: -7px 4px 9px 1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -7px 4px 9px 1px rgba(0, 0, 0, 0.75);
+        box-shadow: -7px 4px 9px 1px rgba(0, 0, 0, 0.75);
+        height: 380px;
+        object-fit: cover;
+        margin-top: 5px;
+        position: relative;
+        top: 40px;
+      }
+    }
+    &__description {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .personal-information {
+    &__avatar {
+      width: 30%;
+    }
+    &__description {
+      width: 70%;
+    }
+  }
+}
